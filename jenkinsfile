@@ -16,7 +16,7 @@ pipeline {
                 node --version
                 echo 'Hello World'
                 npm ci
-                npm run built
+                npm run build
                 '''
             }
         }
