@@ -22,8 +22,11 @@ pipeline {
                 '''
             }*/
             steps {
+                
                 sh '''
                 ls -la
+                npm install
+                npm run build
                 npm insta netlify-cli -g
                 netlify --version
                 '''
