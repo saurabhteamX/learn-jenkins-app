@@ -10,22 +10,17 @@ pipeline {
                     reuseNode true
                 }
             }
-           steps {
-                sh '''
-                ls -la
-                node --version
-                echo 'Hello World'
-                npm ci
-                npm run build
-                echo 'show'
-            
-                '''
-            }
+           
             steps {
                 
                 sh '''
                 ls -la
             
+                node --version
+                echo 'Hello World'
+                npm ci
+                npm run build
+                echo 'show'
                 sleep 10
                 npm install netlify-cli@20.1.1
                 node_module/.bin/netlify --version
