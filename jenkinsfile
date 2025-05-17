@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh '''
                 ls -la
-                npm insta;; netlify-cli -g
+                npm insta netlify-cli -g
                 netlify --version
                 '''
             }
