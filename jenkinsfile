@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Deploy') {
             agent{
 
                 docker {
@@ -10,7 +10,7 @@ pipeline {
                     reuseNode true
                 }
             }
-            steps {
+           \* steps {
                 sh '''
                 ls -la
                 node --version
@@ -19,6 +19,13 @@ pipeline {
                 npm run build
                 echo 'show'
             
+                '''
+            }*\
+            steps {
+                sh '''
+                ls -la
+                npm insta;; netlify-cli -g
+                netlify --version
                 '''
             }
         }
