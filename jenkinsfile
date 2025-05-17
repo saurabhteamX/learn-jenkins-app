@@ -30,6 +30,7 @@ pipeline {
                 sleep 10
                 npm install netlify-cli 
                 node_module/.bin/netlify --version
+                npm audit
                 '''
             }
         }
