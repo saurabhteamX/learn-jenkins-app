@@ -10,7 +10,7 @@ pipeline {
                     reuseNode true
                 }
             }
-           \* steps {
+           /* steps {
                 sh '''
                 ls -la
                 node --version
@@ -20,7 +20,7 @@ pipeline {
                 echo 'show'
             
                 '''
-            }*\
+            }*/
             steps {
                 sh '''
                 ls -la
