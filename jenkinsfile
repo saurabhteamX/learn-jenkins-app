@@ -27,8 +27,9 @@ pipeline {
                 ls -la
                 npm install
                 npm run build
-                npm insta netlify-cli -g
-                netlify --version
+                sleep 10
+                npm install netlify-cli 
+                node_module/.bin/netlify --version
                 '''
             }
         }
